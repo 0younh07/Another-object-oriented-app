@@ -1,9 +1,25 @@
-class Student (idIn: String, nameIn: String, courseIn: String, markIn: Double) {
+class Student (val id: String, var name: String, var course: String, var mark: Double) {
 
-    var id: String = idIn
-    var name: String = nameIn
-    var course: String = courseIn
-    var mark: String = markIn.toString()
+
+
+    fun getGrade(marks: Int) {
+        var grade: String = when(marks){
+            in 70..100 -> "First"
+            in 60..69 -> "2/1"
+            in 50..59 -> "2/2"
+            in 40..49 -> "Third"
+            in 0..39 -> "Fail"
+            else -> "Invalid mark"
+        }
+        return grade
+
+
+
+
+
+
+
+    }
 
 
     override fun toString(): String {
