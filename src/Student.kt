@@ -2,8 +2,8 @@ class Student (val id: String, var name: String, var course: String, var mark: D
 
 
 
-    fun getGrade(marks: Int) : String {
-        var grade: String = when(marks){
+    fun getGrade() : String {
+        var grade: String = when(mark){
             in 70..100 -> "First"
             in 60..69 -> "2/1"
             in 50..59 -> "2/2"
@@ -14,12 +14,16 @@ class Student (val id: String, var name: String, var course: String, var mark: D
         return "grade: $grade"
 
 
+    }
+    fun didPass() : Boolean {
+        return mark >= 40
+        /*
+        if (mark >= 40){
+            return true
+        }
+        return false
 
-
-
-
-
-
+         */
     }
 
 

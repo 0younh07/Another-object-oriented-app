@@ -21,7 +21,9 @@ fun main () {
         val name = Student(id,name,course,mark)
 
         println(name)
-        println(name.getGrade(67))
+        println(name.getGrade())
+        println(name.didPass())
+
 
 
 
