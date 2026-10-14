@@ -2,7 +2,7 @@ class Student (val id: String, var name: String, var course: String, var mark: D
 
 
 
-    fun getGrade(marks: Int) {
+    fun getGrade(marks: Int) : String {
         var grade: String = when(marks){
             in 70..100 -> "First"
             in 60..69 -> "2/1"
@@ -11,7 +11,8 @@ class Student (val id: String, var name: String, var course: String, var mark: D
             in 0..39 -> "Fail"
             else -> "Invalid mark"
         }
-        return grade
+        return "grade: $grade"
+
 
 
 
