@@ -1,10 +1,19 @@
 import kotlin.collections.mutableListOf
 
-class Student (val id: String, nameIn: String, protected var course: String, protected var mark: Double){
+class Student (val id: String, nameIn: String, protected var course: String, markIn: Double){
     protected val modules = mutableListOf<Module>()
 
+
+    var marks = markIn
+        set(newmarks){
+            if(newmarks in 0.0..100.0){
+                field = newmarks
+            }
+        }
     var name = nameIn
         protected set
+
+
 
 
     fun getGrade() : String {
