@@ -4,7 +4,7 @@ class Student (val id: String, nameIn: String, protected var course: String, mar
     protected val modules = mutableListOf<Module>()
 
 
-    var marks = markIn
+    var mark = markIn
         set(newmarks){
             if(newmarks in 0.0..100.0){
                 field = newmarks
